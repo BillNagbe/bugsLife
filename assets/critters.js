@@ -1,5 +1,5 @@
-import { directionNames } from "./directions";
-import helpers from "./utilities";
+import { directionNames } from "./directions.js";
+import helpers from "./utilities.js";
 
 
 class BouncingCritter {

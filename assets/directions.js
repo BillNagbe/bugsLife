@@ -1,3 +1,5 @@
+import { Vector } from "./vector.js"
+
 let directions = {
   "n":  new Vector( 0, -1),
   "ne": new Vector( 1, -1),

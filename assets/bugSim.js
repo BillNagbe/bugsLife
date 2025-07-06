@@ -1,6 +1,6 @@
-import { LifelikeWorld } from "./world";
-import Wall from "./wall";
-import BouncingCritter from "./critters";
+import { LifelikeWorld } from "./world.js";
+import Wall from "./wall.js";
+import BouncingCritter from "./critters.js";
 
 const world = new LifelikeWorld( 
   ["############################",

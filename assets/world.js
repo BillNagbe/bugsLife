@@ -1,8 +1,8 @@
-import helpers from "./utilities";
-import { Vector } from "./vector";
-import View from "./view";
-import Grid from "./grid";
-import { directions } from "./directions";
+import helpers from "./utilities.js";
+import { Vector } from "./vector.js";
+import View from "./view.js";
+import Grid from "./grid.js";
+import { directions } from "./directions.js";
 
 class World {
     constructor(map, legend) {

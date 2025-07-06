@@ -1,5 +1,5 @@
-import helpers from "./utilities";
-import { directions } from "./directions";
+import helpers from "./utilities.js";
+import { directions } from "./directions.js";
 
 
 class View {

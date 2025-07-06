@@ -1,4 +1,4 @@
-
+import helpers from "./utilities.js";
 
 
 let actionTypes = Object.create(null);
@@ -29,7 +29,7 @@ actionTypes.eat = (critter, vector, action) => {
 }
 
 actionTypes.reproduce = (critter, vector, action) => {
-  let baby = elementFromChar(this.legend,
+  let baby = helpers.elementFromChar(this.legend,
                              critter.originChar);
   let dest = this.checkDestination(action, vector);
   if (dest == null ||

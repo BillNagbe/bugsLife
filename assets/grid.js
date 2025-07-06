@@ -1,3 +1,5 @@
+import { Vector } from "./vector.js";
+
 
 class Grid {
     constructor(width, height) {
