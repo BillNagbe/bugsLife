@@ -10,3 +10,6 @@ class Vector {
         return new Vector(x, y); // updates vectors state and returns that new state 
     }
 }
+
+
+export {Vector};

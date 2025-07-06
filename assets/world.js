@@ -1,3 +1,9 @@
+import helpers from "./utilities";
+import { Vector } from "./vector";
+import View from "./view";
+import Grid from "./grid";
+import { directions } from "./directions";
+
 class World {
     constructor(map, legend) {
         let grid = new Grid(map[0].length, map.length); // new grid with x and y lengths
@@ -5,7 +11,7 @@ class World {
         this.legend = legend; // stores inrernal state of legend
         map.forEach((line, y) => {
         for(let i = 0; i < line.length; i++) { // loops thru line variable or x / width
-            grid.set(new Vector(i, y), elementFromChar(legend, line[i])); // updates the internal grid by loops thru the width and waiting for changes
+            grid.set(new Vector(i, y), helpers.elementFromChar(legend, line[i])); // updates the internal grid by loops thru the width and waiting for changes
         }
     });
 
@@ -16,7 +22,7 @@ class World {
         for (let y = 0; y < this.grid.height; y++) { // loops thru height 
         for (let x = 0; x < this.grid.width; x++) {  // loops thru width
             let element = this.grid.get(new Vector(x, y)); // gets the x * y value in an array 
-            output += charFromElement(element); // gets each character from the two upper loops and adds them to an array
+            output += helpers.charFromElement(element); // gets each character from the two upper loops and adds them to an array
         }
         output += "\n"; // new line character on height of grid
   }
@@ -78,3 +84,4 @@ class LifelikeWorld extends World {
 
 
 
+export {World, LifelikeWorld};

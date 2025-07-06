@@ -1,3 +1,6 @@
+
+
+
 let actionTypes = Object.create(null);
 
 actionTypes.grow = (critter) => {
@@ -37,3 +40,6 @@ actionTypes.reproduce = (critter, vector, action) => {
   this.grid.set(dest, baby);
   return true;
 };
+
+
+export default actionTypes;

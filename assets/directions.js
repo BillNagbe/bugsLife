@@ -12,3 +12,6 @@ let directions = {
 
     
 let directionNames = "n ne e se s sw w nw".split(" "); // creates a new array with all directions 
+
+
+export {directions, directionNames};

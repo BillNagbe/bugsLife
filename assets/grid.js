@@ -1,3 +1,4 @@
+
 class Grid {
     constructor(width, height) {
         this.width = width; // stores state of width
@@ -30,3 +31,8 @@ class Grid {
     }
 
 }
+
+
+
+
+export default Grid;

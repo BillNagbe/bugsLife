@@ -1,6 +1,10 @@
+import { directionNames } from "./directions";
+import helpers from "./utilities";
+
+
 class BouncingCritter {
     constructor() {
-        this.direction = randomElement(directionNames); // sets the interal state of direction to a random direction
+        this.direction = helpers.randomElement(directionNames); // sets the interal state of direction to a random direction
     }
 
     act(viewObj) {
@@ -11,3 +15,5 @@ class BouncingCritter {
         return {type: "move", direction: this.direction} // returns an obj with a type called move with a direction property with a random direction
     }
 }
+
+export default BouncingCritter;
