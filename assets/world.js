@@ -54,3 +54,27 @@ class World {
         }
 
 }
+
+
+
+class LifelikeWorld extends World {
+    constructor(map, legend) {
+        super(map, legend);
+        this.map = map;
+        this.legend = legend;
+    }
+
+    letAct(critter, vector) {
+        let action = critter.act(new View(this, vector));
+        let handled = action &&  this.actionTypes[action.type] && this.actionTypes[action.type].call(this, critter, vector, action);
+        if(!handled) {
+            critter.energy -= 0.2;
+            if(critter.energy <= 0) this.grid.set(vector, null);
+        }
+    }
+
+
+}
+
+
+
